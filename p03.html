@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        background-color: #ccc;
+      }
+      /* 置中 */
+      .wrap {
+        width: 1200px;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        /* rwd超過容器會換行 */
+      }
+      .item {
+        width: 358px;
+        margin: 15px;
+        text-align: center;
+        line-height: 1.5;
+        background-color: white;
+        border: 2px solid #eee;
+        transform: translateY(0px);
+        transition: 0.5s;
+      }
+      .item img {
+        width: 100%;
+        vertical-align: middle;
+        /* 圖片在垂直對齊時下面會出現一個空間 */
+      }
+      .item h2 {
+        border-bottom: 2px solid#eee;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.4em;
+      }
+      .item .txt {
+        padding: 20px;
+        position: relative;
+        transition: 0.25s;
+      }
+      /* 三角形用邊框製作 */
+      .item .txt:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        border-top: 50px solid transparent;
+        border-left: 179px solid white;
+        border-right: 179px solid white;
+        transform: translateY(-100%);
+      }
+      .item:hover {
+        transform: translateY(-50px);
+        border: 2px solid #feb85d;
+      }
+      .item:hover .txt {
+        background-image: linear-gradient(0deg, #fb8076, #feb85d);
+        color: white;
+        border-bottom-color: white;
+      }
+      .item:hover .txt:before {
+        border-left: 184px solid #feb85d;
+        border-right: 174px solid #feb85d;
+      }
+      /* 選到前面.item:hover換後面.txt::before */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=20" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=10" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=30" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

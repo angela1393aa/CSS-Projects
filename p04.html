@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body{
+          padding: 100px 0;
+          /* background-color: yellow; */
+          background: linear-gradient(20deg,#3d5493,#1aa2a0) fixed center center / 100% 100%;
+      }
+      .wrap{
+          width: 1200px;
+          margin: auto;
+      }
+      .item{
+          display: flex;
+          align-items: center;
+          margin-bottom: 70px;
+          /* background-color: thistle; */
+          
+      }
+      .pic{
+          width: 55%;
+          flex-shrink: 0;
+          /* 不要壓縮 */
+      }
+      .pic img {
+        width: 100%;
+        vertical-align: middle;
+        /* 圖片在垂直對齊時下面會出現一個空間 */
+        
+      }
+      .txt{
+          width: 55%;
+          flex-shrink: 0;
+          /* 不要壓縮 */
+          background-color: rgba(238, 238, 238, 0.816);
+          padding: 50px 30px;
+          position: relative;
+          z-index: 1;
+          /* 一定要先設相對定位才能設z-index?? */
+      }
+.item > :first-child{
+    margin-right: -10%;
+}
+/* >選到下一層的第一個物件 */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- item 1 -->
+      <div class="item">
+        <div class="pic">
+          <img src="https://picsum.photos/600/350?random=10" alt="" />
+        </div>
+        <div class="txt">
+          <h2>array(陣列)</h2>
+          <p>* 分為一維陣列二維陣列三維陣列</br> 
+            * 用來儲存有序串列的相同資料型別於連續記憶體空間</br> 
+            * 需事先宣告記憶體空間因此容易造成記憶體浪費</br> 
+            * 讀取與修改串列的資料時間很快</br> 
+            * 刪除加入新元素需要移動大量資料</p>
+        </div>
+      </div>
+      <!-- item 2 -->
+      <div class="item">
+        <div class="txt">
+          <h2>Linked list(連結串列)</h2>
+          <p>* 記憶體位置==不連續==以隨機的方式儲存</br> 
+            * 因為==不用事先定義好一塊連續的記憶體空間==，所以插入刪除資料都很方便</br> 
+            * 當想查詢特定節點時，必須==從頭==節點開始走訪</p>
+        </div>
+        <div class="pic">
+          <img src="https://picsum.photos/600/350?random=20" alt="" />
+        </div>
+      </div>
+      <!-- item 3 -->
+      <div class="item">
+        <div class="pic">
+          <img src="https://picsum.photos/600/350?random=30" alt="" />
+        </div>
+        <div class="txt">
+          <h2>Stack 堆疊</h2>
+          <p>Last In First Out (LIFO): 後進先出，後疊的(後進)，先拿走(先出)。</br> 
+            Fisrt In Last Out (FILO): 先進後出，先疊的(先進)，最後拿走(後出)。</br> 
+            放進: 放進stack 的尾巴(疊盤子) ==> push</br> 
+            拿出: 從 stack 的尾巴拿出來(拿盤子) ==> pop</br> 
+            看一下最上面的是甚麼 ==> peek</p>
+        </div>
+      </div>
+      <!-- item 4 -->
+      <div class="item">
+        <div class="txt">
+          <h2>Queue 佇列</h2>
+          <p>First In First Out (FIFO): 先進先出隊伍(Queue) 是一種 先進先出 的資料結構。</br> 
+            以日常生活例子就是排隊，先來的會在前面，後來的會在後面。</br> 
+            Queue 的特性就是新增元素時發生在 Back後端，刪除元素時發生在 Front 前端。不像 Stack 新增刪除都是發生在頂端。</br> 
+            放進 ==> unshift enqueuing</br> 
+            拿出 ==> shift dequeuing</p>
+        </div>
+        <div class="pic">
+          <img src="https://picsum.photos/600/350?random=40" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

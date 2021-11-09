@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      body {
+        background-color: powderblue;
+      }
+      .banner {
+        width: 100%;
+        height: 500px;
+        background-color: #ccc;
+        background: linear-gradient(115deg, #7bf 50%, transparent 50%) center
+            center / 100% 100%,
+          url("https://picsum.photos/id/13/1200/600") right center / auto 100%;
+      }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        /* rwd寬 */
+        height: 100%;
+        margin: auto;
+      }
+      .banner-txt {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* 垂直排列 */
+        justify-content: center;
+        align-items: flex-start;
+        /* 對齊交錯軸線最前端 */
+      }
+      .banner-txt h1 {
+        font-size: 80px;
+        border-bottom: 1px solid #333;
+        font-weight: 900;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.3em;
+      }
+      .banner-txt h1 small {
+        display: block;
+        /* 一整行 */
+        font-size: 53px;
+        font-weight: 700;
+      }
+      .banner-txt h2 {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      .banner-txt p {
+        font-size: 30px;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="container">
+        <div class="banner-txt">
+          <h1>金魚都能懂的 <small>網頁切板怎麼切</small></h1>
+          <h2>圖文滿板區塊</h2>
+          <p>金魚切不出來時在說不過去阿~</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      .wrap {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-30deg, #fdaecb, #e7597f, #fe8556);
+      }
+      .container {
+        /* width: 1200px;
+        margin: auto; */
+        display: flex;
+        flex-wrap: wrap;
+        /* rwd超過容器會換行 */
+      }
+      .item {
+        width: 348px;
+        margin: 15px;
+        display: flex;
+        background-color: #fff;
+        border: 1px solid #888;
+        box-shadow: 0 10px 30px rgba(160, 0, 0, 0.5);
+        /*陰影: x y 模糊程度 色彩 */
+      }
+      .pic {
+        width: 50%;
+      }
+      .pic img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        /* 圖片在垂直對齊時下面會出現一個空間 */
+        object-fit: cover;
+        /* 決定圖片填滿方式:cover讓背景圖盡可能覆蓋整個區域，也會裁切掉部分圖片 */
+      }
+      .txt {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* 變直排 */
+        /* justify-content: center; */
+        /* 垂直置中 */
+      }
+      .txt h2 {
+        margin-bottom: 0.4em;
+        font-size: 1.4em;
+      }
+      .txt p {
+        font-weight: 100;
+      }
+      .txt .btn {
+        line-height: 1.5em;
+        border: 1px solid #fe8556;
+        padding: 0 1em;
+        align-self: flex-end;
+        /* 不要滿板 */
+        text-decoration: none;
+        /* 不要底線 */
+        border-radius: 200px;
+        margin-top: 0.4em;
+        color: #fe8556;
+        transition: 0.7s;
+      }
+      .txt .btn:hover {
+        background-color: #fe8556;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <div class="item">
+          <div class="pic">
+            <img src="https://picsum.photos/600/350?random=10" alt="" />
+          </div>
+          <div class="txt">
+            <h2>金魚都能懂的 <small>網頁切板怎麼切</small></h2>
+            <p>超通用橫式版面</p>
+            <a href="#" class="btn">more</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic">
+            <img src="https://picsum.photos/600/350?random=11" alt="" />
+          </div>
+          <div class="txt">
+            <h2>金魚都能懂的 <small>網頁切板怎麼切</small></h2>
+            <p>超通用橫式版面</p>
+            <a href="#" class="btn">more</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="item">
+          <div class="pic">
+            <img src="https://picsum.photos/600/350?random=12" alt="" />
+          </div>
+          <div class="txt">
+            <h2>金魚都能懂的 <small>網頁切板怎麼切</small></h2>
+            <p>超通用橫式版面</p>
+            <a href="#" class="btn">more</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic">
+            <img src="https://picsum.photos/600/350?random=13" alt="" />
+          </div>
+          <div class="txt">
+            <h2>金魚都能懂的 <small>網頁切板怎麼切</small></h2>
+            <p>超通用橫式版面</p>
+            <a href="#" class="btn">more</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic">
+            <img src="https://picsum.photos/600/350?random=14" alt="" />
+          </div>
+          <div class="txt">
+            <h2>金魚都能懂的 <small>網頁切板怎麼切</small></h2>
+            <p>超通用橫式版面</p>
+            <a href="#" class="btn">more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

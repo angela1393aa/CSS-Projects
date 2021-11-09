@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      body {
+        background-color: pink;
+      }
+      .wrap {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item {
+        width: 25%;
+        position: relative;
+      }
+      .item img {
+        width: 100%;
+        vertical-align: middle;
+        /* 圖片在垂直對齊時下面會出現一個空間 */
+      }
+      .item .txt {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* 文字置中 */
+        opacity: 0;
+        /* 文字透明 */
+        transition: opacity 0.5s;
+      }
+      .item:hover .txt {
+        opacity: 1;
+      }
+      .item h2:after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 2px;
+        margin: 10px 0;
+        background-color: #eee;
+        transition: width 0.5s 0.2s;
+      }
+      .item:hover h2:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=10" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=20" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=30" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/500/400?random=40" alt="" />
+        <div class="txt">
+          <h2>金魚都能懂的網頁切板怎麼切</h2>
+          <p>互動圖文卡片</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
