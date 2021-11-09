@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      body {
+        background-color: rgba(204, 204, 204, 0.381);
+        text-align: center;
+      }
+      .wrap {
+        display: flex;
+        width: 1200px;
+        margin: auto;
+      }
+      .item {
+        margin: 20px;
+        transform: scale(1);
+        transition: 0.5s;
+        box-shadow: 2px 3px 5px rgb(133, 132, 132);
+      }
+      .item:hover {
+        transform: scale(1.1);
+      }
+      .pic img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      .txt {
+        text-align: center;
+        background-color: #fff;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Projects</h1>
+    <div class="wrap">
+      <div class="item">
+        <a href="./p03.html">
+          <div class="pic">
+            <img src="./images/p03.png" alt="人員介紹卡片" />
+          </div>
+          <div class="txt">
+            <p>人員介紹卡片</p>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="./p04.html">
+          <div class="pic">
+            <img src="./images/p04.png" alt="交錯漂浮板" />
+          </div>
+          <div class="txt">
+            <p>交錯漂浮板</p>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="./p05.html">
+          <div class="pic">
+            <img src="./images/p05.png" alt="超通用橫式板面" />
+          </div>
+          <div class="txt">
+            <p>超通用橫式板面</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="item">
+        <a href="./p01.html">
+          <div class="pic">
+            <img src="./images/p01.png" alt="圖文滿板區塊" />
+          </div>
+          <div class="txt">
+            <p>圖文滿板區塊</p>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="./p02.html">
+          <div class="pic">
+            <img src="./images/p02.png" alt="互動圖文卡片" />
+          </div>
+          <div class="txt">
+            <p>互動圖文卡片</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
