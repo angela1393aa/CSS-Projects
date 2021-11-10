@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>收合-直式側邊選單怎麼切 NO014</title>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        /* box-sizing: border-box; */
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      html,
+      body {
+        height: 100vh;
+        background-color: #546377;
+      }
+      .side-menu {
+        width: 300px;
+        height: 100%;
+        background: linear-gradient(0deg, #3381b0, #c2196c);
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+        box-shadow: 10px 0px 10px hsla(240, 40%, 20%, 0.6);
+        /* HSLA 即色相、饱和度、亮度、透明度 */
+      }
+      /* 搜尋 */
+      .side-menu form {
+        display: flex;
+        margin: 0 10px 50px;
+        border-radius: 100px;
+        border: 1px solid rgb(255, 255, 255, 0.4);
+      }
+      .side-menu form input,
+      .side-menu form button {
+        border: none;
+        background-color: transparent;
+        padding: 5px 10px;
+        color: #fff;
+      }
+      .side-menu form input {
+        width: 230px;
+      }
+      .side-menu form button {
+        width: 50px;
+      }
+      .side-menu form input:focus,
+      .side-menu form button:focus {
+        outline: none;
+        /* 取得焦點實沒有外框線 */
+      }
+      /* 導覽列 */
+      nav a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+      }
+      nav a + a::before {
+        content: "";
+        border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: -1px;
+      }
+      nav a .fa {
+        margin-right: -1.1em;
+        transform: scale(0);
+        transition: 0.4s;
+      }
+      nav a:hover .fa {
+        margin-right: 0em;
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="" />
+    <!-- 直式側邊選單 -->
+    <div class="side-menu">
+      <form action="">
+        <input type="search" placeholder="請輸入關鍵字" />
+        <button><i class="fa fa-search"></i></button>
+      </form>
+      <nav>
+        <a href="#">
+          <i class="fa fa-users" aria-hidden="true"></i>
+          關於我們
+        </a>
+        <a href="#"><i class="fa fa-gavel" aria-hidden="true"></i>服務項目</a>
+        <a href="#"><i class="fa fa-users" aria-hidden="true"></i>成果展示</a>
+        <a href="#"
+          ><i class="fa fa-object-group" aria-hidden="true"></i>聯絡我們</a
+        >
+        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i>成果發展</a>
+      </nav>
+    </div>
+  </body>
+</html>

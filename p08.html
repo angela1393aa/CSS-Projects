@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>變化你的導覽列 NO008</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      .main-header {
+        background: linear-gradient(45deg, #cc4380, #fb6c75);
+      }
+      .main-header .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 垂直置中 */
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .main-header .logo {
+        width: 100px;
+      }
+      .main-header .logo img {
+        width: 100%;
+        vertical-align: middle;
+        /* 圖片在垂直對齊時下面會出現一個空間 */
+      }
+      .main-header .main-nav {
+        /* margin: auto; */
+        /* 把剩餘空間分配給他 */
+        display: flex;
+        /* 解決transform: translateY移動問題在.main-header .main-nav加了display: flex;就可以了 */
+        /* 因為轉換物件的屬性就能產生作用，inline屬性無法作用 */
+      }
+      .main-header .main-nav:first-of-type {
+        order: -1;
+        /* logo換順序 */
+      }
+
+      .main-header .main-nav a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 1em;
+        position: relative;
+        transition: 0.3s;
+      }
+      .main-header .main-nav a:hover {
+        transform: translateY(-5px);
+      }
+      .main-header .main-nav a:after {
+        /* nav的底線 */
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -5px;
+        height: 0;
+        border-bottom: 1px solid #fff;
+        transition: 0.3s;
+      }
+      .main-header .main-nav a:hover:after {
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="#" class="logo"><img src="./images/logo.png" alt="logo" /></a>
+        <nav class="main-nav">
+          <a href="#">關於我們</a>
+          <a href="#">服務項目</a>
+        </nav>
+
+        <nav class="main-nav">
+          <a href="#">成果展示</a>
+          <a href="#">聯絡我們</a>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

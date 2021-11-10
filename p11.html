@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>方塊酥版面 NO010</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      body {
+        background: #000;
+      }
+      .wrap {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        /* 讓父層能抓到所有子層的高度 */
+        position: relative;
+        top: calc((50vh) / 2);
+      }
+      .item {
+        float: left;
+        position: relative;
+      }
+      .item img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      .item:first-child {
+        width: 50%;
+      }
+      .item:first-child ~ .item {
+        /* 選到第一個之外的 */
+        width: 25%;
+      }
+      .item .txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* 背景黑色半透明 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        transition: 0.5s;
+      }
+      .item:hover .txt {
+        display: flex;
+      }
+      .item h3 {
+        margin-bottom: 0.4em;
+      }
+      .item p {
+        font-weight: 100;
+        line-height: 1.5;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/600/350?random=14" alt="" />
+        <div class="txt">
+          <h3>position: sticky;动态固定</h3>
+          <p>
+            页面向下滚动时，工具栏变成固定位置，始终停留在页面头部（fixed定位）。
+            等到页面重新向上滚动回到原位，工具栏也会回到默认位置（relative定位）。
+            必须搭配top、bottom、left、right这四个属性一起使用，不能省略，否则等同于relative定位，不产生"动态固定"的效果。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/600/350?random=10" alt="" />
+        <div class="txt">
+          <h3>position: static;靜態位置</h3>
+          <p>
+            浏览器会按照源码的顺序，决定每个元素的位置，这称为"正常的页面流"（normal
+            flow）。
+            每个块级元素占据自己的区块（block），元素与元素之间不产生重叠。
+            對top、bottom、left、right这四个属性无效。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/600/350?random=11" alt="" />
+        <div class="txt">
+          <h3>position: relative;相對位置</h3>
+          <p>
+            相对于默认位置（即static时的位置）进行偏移，即定位基点是static。
+            搭配top、bottom、right、left屬性，會使其元素「相對地」調整其原本該出現的所在位置，都不會影響到原本其他元素所在的位置。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/600/350?random=12" alt="" />
+        <div class="txt">
+          <h3>position: absolute;絕對定位</h3>
+          <p>
+            相对于上级元素（一般是父元素）进行偏移，即定位基点是父元素。
+            必须搭配top、bottom、left、right这四个属性一起使用。
+            absolute定位的元素会被"正常页面流"忽略，即在"正常页面流"中，该元素所占空间为零，周边元素不受影响。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/600/350?random=13" alt="" />
+        <div class="txt">
+          <h3>position: fixed;固定位置</h3>
+          <p>
+            相对于视口（viewport，浏览器窗口）进行偏移，即定位基点是浏览器窗口。
+            这会导致元素的位置不随页面滚动而变化，好像固定在网页上一样。捲動卷軸時不會移動
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

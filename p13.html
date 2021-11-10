@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表格怎麼切 NO012</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* box-sizing: border-box; */
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      html,
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        /* 置中 */
+        background-image: linear-gradient(90deg, rgb(135, 167, 236), #74e6a5);
+      }
+      .table {
+        width: 800px;
+        margin: auto;
+      }
+      .table table {
+        border: 3px double #666;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        /* 外圓角 */
+      }
+      .table thead {
+        background: #333;
+        color: #fff;
+      }
+      /* 內圓角 */
+      .table thead th:first-child {
+        border-radius: 7px 0 0 0;
+      }
+      .table thead th:last-child {
+        border-radius: 0 7px 0 0;
+      }
+      .table tbody tr:nth-child(even) {
+        background-color: rgb(135, 167, 236);
+        /* 偶數列 */
+      }
+      .table tbody tr:nth-child(odd) {
+        background-color: #74e6a5;
+        /* 偶數列 */
+      }
+      .table tbody a {
+        color: #fa0;
+      }
+      .table tbody tr:hover {
+        background-color: #fee;
+      }
+      .table tfoot td:first-child {
+        border-radius: 0 0 0 7px;
+      }
+      .table tfoot td:last-child {
+        border-radius: 0 0 7px 0;
+      }
+      /* 格線 */
+      .table th {
+        border: 1px solid #666;
+        padding: 6px 10px;
+      }
+      .table td {
+        border: 1px solid #666;
+        padding: 6px 10px;
+      }
+      .table caption {
+        caption-side: bottom;
+        /* 標題放到最下面 */
+        text-align: right;
+        padding: 10px 0;
+        color: #fa0;
+      }
+      .table caption a {
+        color: #eee;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <table>
+        <caption>
+          <h1>金大聖誕月<a href="">詳細內容點這裡</a></h1>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">禮拜日</th>
+            <th scope="col">禮拜一</th>
+            <th scope="col">禮拜二</th>
+            <th scope="col">禮拜三</th>
+            <th scope="col">禮拜四</th>
+            <th scope="col">禮拜五</th>
+            <th scope="col">禮拜六</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="">五月天</a></td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+          </tr>
+          <tr>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td><a href="">周杰倫</a></td>
+          </tr>
+          <tr>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td><a href="">蕭敬騰</a></td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+          </tr>
+          <tr>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+            <td><a href="">顏人中</a></td>
+            <td>敬請期待</td>
+            <td>敬請期待</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>備註</td>
+            <td colspan="6"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

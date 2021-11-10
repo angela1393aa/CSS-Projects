@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>破格式設計 NO011</title>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* box-sizing: border-box; */
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      html,body{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(-45deg,#fffaf0,#f8c3c1);
+      }
+      .wrap{
+        display: flex;
+        width: 1200px;
+        margin: 100px auto;
+        /* background-color: #f5a; */
+        padding-top: 75px;
+        /* 把高度補回來 */
+      }
+      .item{
+        width: 370px;
+        /* (1200/3)-(15*2) */
+        margin: 0 15px;
+        text-align: center;
+        border: 10px solid #f5afac;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 10px 20px 50px #f7b6a7;
+        /* 左右,上下,模糊 */
+      }
+      .item h3{
+        color: #f5afac;
+      }
+      .item p{
+        color: #ccc;
+      }
+      .item .txt{
+          padding: 20px 20px 2em;
+      }
+      .item .icon{
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        margin: -75px auto 0;
+        font-size: 85px;
+        line-height: 150px;
+        /* 垂直置中 */
+        border-radius: 50%;
+        position: relative;
+        color: #f5afac;
+      }
+      .item .icon:before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-top: 10px solid #f5afac;
+          border-right: 10px solid #f5afac;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid transparent;
+          left: -10px;
+          top: -10px;
+          /* -10px要扣掉邊框線 */
+          border-radius: 50%;
+          transform: rotate(-45deg);
+      }
+      /* ---animation--- */
+      .item:hover .fas{
+          animation: touch .2s linear infinite alternate;
+          cursor: pointer; 
+      }
+      @keyframes touch{
+          0% { transform: rotate(-10deg);}
+          100% { transform: rotate(10deg);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <div class="icon"><i class="fas fa-gavel"></i></div>
+        <div class="txt">
+          <h3>array(陣列)</h3>
+          <p>* 分為一維陣列二維陣列三維陣列</br> 
+            * 用來儲存有序串列的相同資料型別於連續記憶體空間</br> 
+            * 需事先宣告記憶體空間因此容易造成記憶體浪費</br> 
+            * 讀取與修改串列的資料時間很快</br> 
+            * 刪除加入新元素需要移動大量資料</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon"><i class="fas fa-thumbs-up"></i></div>
+        <div class="txt">
+          <h3>Linked list(連結串列)</h3>
+          <p>* 記憶體位置==不連續==以隨機的方式儲存</br> 
+            * 因為==不用事先定義好一塊連續的記憶體空間==，所以插入刪除資料都很方便</br> 
+            * 當想查詢特定節點時，必須==從頭==節點開始走訪</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon"><i class="fas fa-bell"></i></div>
+        <div class="txt">
+          <h3>Stack 堆疊</h3>
+          <p>
+            Fisrt In Last Out (FILO): 先進後出，先疊的(先進)，最後拿走(後出)。</br> 
+            放進: 放進stack 的尾巴(疊盤子) ==> push</br> 
+            拿出: 從 stack 的尾巴拿出來(拿盤子) ==> pop</br> 
+            看一下最上面的是甚麼 ==> peek</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

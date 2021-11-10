@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>網站麵包屑 NO009</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      body {
+        background-color: #562870;
+      }
+      .wrap {
+        padding: 10px 0;
+        background-color: mediumpurple;
+        box-shadow: 0 5px 5px rgb(86, 61, 135);
+      }
+      .breadcrumb {
+        width: 90%;
+        margin: auto;
+        display: flex;
+      }
+      .breadcrumb li {
+        padding: 0 20px;
+      }
+      .breadcrumb a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .breadcrumb a:hover {
+        color: rgb(100, 69, 162);
+      }
+      .breadcrumb li:last-child a {
+        color: #562870;
+      }
+      .breadcrumb li + li {
+        padding-left: 0;
+      }
+      .breadcrumb li + li:before {
+        content: ">";
+        color: #fff;
+        margin-right: 20px;
+        /* 排除第一個 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">服務項目</a></li>
+        <li><a href="#">成果展示</a></li>
+        <li><a href="#">聯絡我們</a></li>
+        <li><a href="#">成果發展</a></li>
+      </ol>
+    </div>
+  </body>
+</html>
