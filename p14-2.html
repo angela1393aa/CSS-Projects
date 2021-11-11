@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>收合-直式側邊選單怎麼切 NO014</title>
+    <title>多層次收合選單 NO015</title>
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: column;
         padding: 50px 0;
-        box-shadow: 10px 0px 10px hsla(240, 40%, 20%, 0.6);
+        box-shadow: 5px 5px 10px hsla(240, 40%, 20%, 0.6);
         /* HSLA 即色相、饱和度、亮度、透明度 */
         transform: translateX(-100%);
         /* 側欄拉到試窗外 */
@@ -87,9 +87,9 @@
         /* 垂直置中 */
         text-align: center;
         /* 水平置中 */
+        cursor: pointer;
         font-size: 30px;
         border-radius: 0 10px 10px 0;
-        cursor: pointer;
       }
       #side-menu-switch:checked + .side-menu {
         transform: translateX(0);
@@ -104,14 +104,14 @@
         /* 讓checkbox消失 */
       }
       /* 導覽列 */
-      nav a {
+      .nav a {
         display: block;
         padding: 10px;
         color: #fff;
         text-decoration: none;
         position: relative;
       }
-      nav a + a::before {
+      .nav li + li a::before {
         content: "";
         border-bottom: 1px solid rgb(255, 255, 255, 0.4);
         position: absolute;
@@ -119,14 +119,34 @@
         right: 10px;
         top: -1px;
       }
-      nav a .fa {
+      .nav a .fa {
         margin-right: -1.1em;
         transform: scale(0);
         transition: 0.4s;
       }
-      nav a:hover .fa {
+      .nav li:hover .fa {
         margin-right: 0em;
         transform: scale(1);
+      }
+      .nav li:hover > a {
+        background-color: rgba(0, 0, 0, 0.2);
+        /* 太神啦!! */
+      }
+      /* 裡面的ul要凸出去 */
+      .nav li {
+        position: relative;
+      }
+      .nav ul {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 5px 5px 10px hsla(240, 40%, 20%, 0.6);
+        display: none;
+      }
+      .nav li:hover > ul {
+        display: block;
       }
     </style>
   </head>
@@ -141,18 +161,73 @@
         <input type="search" placeholder="請輸入關鍵字" />
         <button><i class="fa fa-search"></i></button>
       </form>
-      <nav>
-        <a href="#">
-          <i class="fa fa-users" aria-hidden="true"></i>
-          關於我們
-        </a>
-        <a href="#"><i class="fa fa-gavel" aria-hidden="true"></i>服務項目</a>
-        <a href="#"><i class="fa fa-users" aria-hidden="true"></i>成果展示</a>
-        <a href="#"
-          ><i class="fa fa-object-group" aria-hidden="true"></i>聯絡我們</a
-        >
-        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i>成果發展</a>
-      </nav>
+      <ul class="nav">
+        <li>
+          <a href="#">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            關於我們
+          </a>
+          <!-- 在a的後面li裡面加ul -->
+          <ul>
+            <li>
+              <a href="#">HTML教學</a>
+              <ul>
+                <li><a href="#">DAY1</a></li>
+                <li><a href="#">DAY2</a></li>
+                <li><a href="#">DAY3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">CSS教學</a>
+              <ul>
+                <li><a href="#">DAY1</a></li>
+                <li><a href="#">DAY2</a></li>
+                <li><a href="#">DAY3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">JavaScript教學</a>
+              <ul>
+                <li><a href="#">DAY1</a></li>
+                <li><a href="#">DAY2</a></li>
+                <li><a href="#">DAY3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">jQuery教學</a>
+              <ul>
+                <li><a href="#">DAY1</a></li>
+                <li><a href="#">DAY2</a></li>
+                <li><a href="#">DAY3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-gavel" aria-hidden="true"></i>
+            服務項目
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-users" aria-hidden="true"></i>
+            成果展示
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-object-group" aria-hidden="true"></i>
+            聯絡我們
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            成果發展
+          </a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

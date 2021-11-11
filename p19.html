@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>時間軸 NO019</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      html,
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        /* 置中 */
+        background-color: #edece1;
+      }
+      .wrap {
+        width: 960px;
+        margin: auto;
+        text-align: center;
+      }
+      .wrap:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0;
+        clear: both;
+      }
+      .timeline {
+        padding: 50px 0 200px;
+      }
+      .timeline li {
+        width: 50%;
+        padding: 20px 0;
+        position: relative;
+      }
+      /* ---卡片--- */
+      .timeline li:nth-child(odd) {
+        /* 奇數 */
+        float: left;
+        padding-right: 100px;
+      }
+      .timeline li:nth-child(even) {
+        /* 偶數 */
+        float: right;
+        padding-left: 100px;
+        transform: translateY(50%);
+        /* 往下移動一半的距離 */
+      }
+      .timeline a {
+        text-decoration: none;
+        /* a是inline */
+        display: block;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px #888;
+      }
+      .timeline a:hover {
+        background-color: #aaa;
+      }
+      .timeline a:hover h2,
+      .timeline a:hover p {
+        color: #fff;
+      }
+      .timeline h2 {
+        color: #333;
+      }
+
+      .timeline p {
+        color: #666;
+      }
+      /* ---垂直線--- */
+      .timeline li:nth-child(odd):after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #aaa;
+        /* z-index: -1; */
+      }
+      .timeline li:last-child:after {
+        /* 最後一個子物件高度只有50% */
+        height: 50%;
+      }
+      /* ---圓點點--- */
+      .timeline li::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #aaa;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /* 垂直置中 */
+        z-index: 1;
+        /* 讓點點在上面 */
+      }
+      .timeline li:nth-child(odd)::before {
+        right: -10px;
+      }
+      .timeline li:nth-child(even)::before {
+        left: -10px;
+      }
+      /* ---水平線--- */
+      .timeline h2::after {
+        content: "";
+        height: 2px;
+        width: 100px;
+        background-color: #aaa;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /* 垂直置中 */
+      }
+      .timeline li:nth-child(odd) h2::after {
+        right: 0px;
+      }
+      .timeline li:nth-child(even) h2::after {
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>iSport! 就是愛健身，邁向健康曲線</h1>
+      <p>
+        iSport! 是一個使用 React
+        建立的前端電子商務專案，此專案中，後端我們使用了 Node.js 搭配 Express
+        做出 restful api ，前端使用 React 框架透過 axios 的技術來跟 api
+        做串接，打造出一個全方位的電商網站。 </br>專案中我們額外使用到
+        tailwind、Figma、react-draft-wysiwyg文字編輯器、aos 動畫、leaflet
+        地圖、socket.io聊天室、Cloudinary 雲端存取、react-credit-cards
+        信用卡套件等等，也善用了許多雲端平台，像是 slack、google meet、google
+        jamboard 等，在版本控制上我們使用 git-flow 的模式來開發。
+      </p>
+      <ul class="timeline">
+        <li>
+          <a href="#">
+            <h2>Topic name - 專題名稱</h2>
+            <p>
+                iSport! 就是愛健身，邁向健康曲線
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2>Team member - 團隊成員</h2>
+            <p>
+                謝姝璇、劉又瑄、林美惠、陳豪宇、林宜瑾
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2>Initial - 專題構思</h2>
+            <p>
+                一個專為熱愛健身、運動的人打造的網路平台。從運動、健身相關的影片、文章分享為出發點，提供學習的分享平台，並提供相關商品給使用者選購。
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2>Project features - 專案特色</h2>
+            <p>
+                主要分享健身影片及文章，並販售健身、運動相關商品，會員能發表文章、可以留言討論分享心得，並還有提供健身房的據點。</br>
+                希望透過此平台，推廣健身運動，並經營商城達到資訊分享以及創造利潤的目的。讓更多人能有機會接觸、瞭解健身，並由飲食出發，在生活中實踐更健康的生活。
+            </p>
+          </a>
+        </li>
+        <li>
+            <a href="#">
+              <h2>Features - 專案功能</h2>
+              <p>
+                首頁：網站的總覽與重點，包含了精選影片、多樣商品、優質文章、健身房、聊天室五大部分。</br>
+                精選影片：透過平台提供的運動影片，使用者能在家觀看影片做運動，並學習包括飲食、有氧等健身相關的知識。</br>
+                多樣商品：藉由推廣健康飲食、正確運動的概念，提供多樣優質運動相關商品，方便使用者在學習健身的過程中輕鬆下單購買各式健身運動相關的商品。</br>
+                優質文章：會員可以自由發表與健身相關的文章，使用者可以按讚、收藏，從中學習健身、運動知識。</br>
+                健身房：顯示各地健身房的據點位置，利於使用者找尋最近的健身房。</br>
+                會員專區： 會員基本資料修改、查看購物車、結帳等購物流程，也可以發表文章、收藏文章、影片。
+              </p>
+            </a>
+          </li>
+      </ul>
+    </div>
+  </body>
+</html>

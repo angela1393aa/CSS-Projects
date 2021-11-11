@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>訂單進度條 NO016</title>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      html,
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        /* 置中 */
+        background-image: linear-gradient(90deg, rgb(135, 167, 236), #74e6a5);
+      }
+      .list {
+        display: flex;
+        justify-content: center;
+      }
+      .list li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(9deg, #185a9d, #43cea2);
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        font-size: 18px;
+        /* 加邊框 */
+        box-shadow: 0 0 0 4px #fff;
+      }
+      .list li .fa {
+        font-size: 30px;
+        margin-bottom: 6px;
+      }
+      .list li + li {
+        margin-left: 100px;
+        /* li後面的li */
+      }
+      /* 連接線 */
+      .list li + li::before {
+        /* 第一個不要其它的後面都要有 */
+        content: "";
+        width: 100px;
+        height: 5px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /* 垂直置中 */
+        left: -100px;
+        /* 往左位移 */
+      }
+      /* 加入active的效果 */
+      .list li.active ~ li {
+        /* active後面的li */
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <li><i class="fa fa-clipboard-check" aria-hidden="true"></i>收到訂單</li>
+      <li class="active">
+        <i class="fa fa-archive" aria-hidden="true"></i>撿貨中
+      </li>
+      <li><i class="fa fa-truck" aria-hidden="true"></i>運送中</li>
+      <li><i class="fa fa-check-circle" aria-hidden="true"></i>已送達</li>
+    </div>
+  </body>
+</html>
