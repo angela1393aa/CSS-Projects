@@ -62,6 +62,54 @@
   right: 0;
   border-bottom: 1px solid #fa0;
 }
+/* 漢堡 */
+#menu_control {
+  display: none;
+  position: absolute;
+  /* 讓它消失 */
+  /* z-index: 1; */
+  /* 出現 */
+}
+header {
+  position: relative;
+}
+.menu_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #fa0;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+.menu_btn span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+  /* 選單文字隱藏 */
+}
+.menu_btn::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 5px;
+  width: 30px;
+  background-color: #3f5494;
+  /* 垂直置中 */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  /* 垂直置中 */
+  box-shadow: 0 8px 0 #3f5494, 0 -8px 0 #3f5494;
+  /* 製作另外兩根 */
+}
+#menu_control:checked ~ header nav {
+  right: 0;
+  /* 打勾出現 */
+}
 /* 滿板圖文區塊 */
 .banner {
   width: 100%;
@@ -386,4 +434,29 @@
 }
 .section-bg2 {
   background-color: #3d57a59c;
+}
+@media screen and (max-width: 768px) {
+  .wrap-people {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap-pick {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap-pick .item {
+    margin: 50px 0;
+  }
+  .menu_btn {
+    display: block;
+  }
+  .main-header .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: #3f549489;
+    padding: 20px 0;
+  }
 }
