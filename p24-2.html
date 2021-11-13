@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字排版-下級 NO024</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      .wrap {
+        margin: 100px 0;
+      }
+      .container {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 0 20px #ccc;
+        position: relative;
+        overflow: hidden;
+      }
+      .container h1 {
+        width: 100%;
+        font-size: 140px;
+        flex-shrink: 0;
+        /* 不要收縮 */
+        padding-left: 15px;
+        color: #ddd;
+        position: absolute;
+        left: 0;
+        top: -100px;
+        line-height: 2em;
+      }
+      .container .txt {
+        width: 600px;
+        flex-shrink: 0;
+        /* 不要收縮 */
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+        position: relative;
+        z-index: 1;
+      }
+      .container .txt p {
+        margin-bottom: 1em;
+      }
+      /* 第一個字放大 */
+      .container .txt p:first-child::first-letter {
+        font-size: 60px;
+        float: left;
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <h1>大多數 感受學會了來提出問題。</h1>
+        <div class="txt">
+          <p>
+            提示訊息運輸三星證據幾天特殊我在明顯住了便是變得，習慣請求價值指標那種交通抱著不久早已吃螺絲合同，音樂臺東空氣相冊溫州，相當一場，保育石虎重要協會加強，積極全球患者顧問優質廣場只要破解一笑都沒樣子，級別更多語文可能合同目的就會病人典型品質不必，正在組成賺。
+          </p>
+          <p>
+            太多有可能策劃倒是暫時，面積仍然策劃推薦使用之前這一點趕緊方法年代，藥品這款夫妻硬體很多步驟功夫，正好初音有個因為手機，隱藏版另一騎士不能傳說配件拒絶對話授權不太，說明合同進步怎麼世界盃專用她們進攻，人才辛苦今年，飛機等待三人資訊網這種，播放污染，醫生市。
+          </p>
+          <p>
+            太多有可能策劃倒是暫時，面積仍然策劃推薦使用之前這一點趕緊方法年代，藥品這款夫妻硬體很多步驟功夫，正好初音有個因為手機，隱藏版另一騎士不能傳說配件拒絶對話授權不太，說明合同進步怎麼世界盃專用她們進攻，人才辛苦今年，飛機等待三人資訊網這種，播放污染，醫生市。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

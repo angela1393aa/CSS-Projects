@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旋轉拼接方塊 NO020</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* box-sizing: border-box; */
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      ul {
+        width: 960px;
+        padding: 100px 100px 100px 0;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      li {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        /* outline: 1px solid #f00; */
+        margin: 0 60px -40px;
+        position: relative;
+        font-size: 30px;
+      }
+      li::before {
+        /* 裡面的項目 */
+        content: "";
+        width: 200px;
+        height: 200px;
+        /* outline: 1px solid #00f; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+      li:nth-child(n + 4) {
+        /* 第二層偏移 */
+        left: 160px;
+      }
+      li:nth-child(n + 7) {
+        /* 第三層偏移 */
+        left: 0px;
+      }
+      li:nth-child(n + 10) {
+        /* 第二層偏移 */
+        left: 160px;
+      }
+      .box1::before {
+        background-color: #dcb5ff;
+      }
+      .box2::before {
+        background-color: #c1ffe4;
+      }
+      .box3::before {
+        background-color: #caffff;
+      }
+      .box4::before {
+        background-color: #b9b9ff;
+      }
+      .box5::before {
+        background-color: #97cbff;
+      }
+      .box6::before {
+        background-color: #ff7575;
+      }
+      .box7::before {
+        background-color: #ff8eff;
+      }
+      .box8::before {
+        background-color: #ffad86;
+      }
+      .box9::before {
+        background-color: #ffe66f;
+      }
+      .box10::before {
+        background-color: #81c0c0;
+      }
+      .box11::before {
+        background-color: #ca8ec2;
+      }
+      .box12::before {
+        background-color: #a6a6d2;
+      }
+      li:hover {
+        color: #fff;
+        cursor: pointer;
+      }
+      li:hover::before {
+        background-color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="box1">HTML</li>
+      <li class="box2">CSS</li>
+      <li class="box3">JavaScript</li>
+      <li class="box4">TailwindCSS</li>
+      <li class="box5">Bootstrap</li>
+      <li class="box6">jQuery</li>
+      <li class="box7">React.Js</li>
+      <li class="box8">Node.Js</li>
+      <li class="box9">PHP</li>
+      <li class="box10">Express.Js</li>
+      <li class="box11">MySQL</li>
+      <li class="box12">RESTful API</li>
+    </ul>
+  </body>
+</html>

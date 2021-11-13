@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不規則邊緣</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* box-sizing: border-box; */
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      .banner{
+          height: 700px;
+          background: url(./images/cat.jpeg) center center / cover;
+      }
+      .sec{
+          position: relative;
+      }
+      .sec .container{
+          width: 1200px;
+          margin: auto;
+          display: flex;
+          padding: 100px 0;
+          /* 讓文字在最上層 */
+          position: relative;
+          z-index: 2;
+      }
+      .sec .item{
+          width: 570px;
+          margin: 0 15px;
+      }
+      .sec .item h2{
+          margin-bottom: 1.3em;
+      }
+      .sec .item p{
+          line-height: 1.7;
+          margin-bottom: 1.6em;
+      }
+      /* 圓點 */
+      .sec::after{
+          content: '';
+          display: block;
+          width: 200px;
+          height: 200px;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          /* 垂直減少一半 */
+          border-radius: 50%;
+          box-shadow: 178px 0px 0px 30px #fff,
+                      327px 34px 0px 20px #fff,
+                      480px 9px 0px 60px #fff,
+                      690px 71px 0px 60px #fff,
+                      880px 0px 0px 89px #fff,
+                      
+                      -178px 0px 0px 30px #fff,
+                      -327px 34px 0px 20px #fff,
+                      -480px 9px 0px 60px #fff,
+                      -690px 71px 0px 60px #fff,
+                      -880px 0px 0px 89px #fff,
+                      -1100px 50px 0px 89px #fff,
+
+                      100px 0px 0px 56px rgba(0, 0, 10, .5),
+                      298px 10px 0px 56px rgba(0, 0, 10, .5),
+                      540px -40px 0px 50px rgba(0, 0, 10, .5),
+                      740px -30px 0px 30px rgba(0, 0, 10, .5),
+                      880px -100px 0px 80px rgba(0, 0, 10, .5),
+                      1000px 0px 0px 80px rgba(0, 0, 10, .5),
+                      
+                      -60px 0px 0px 56px rgba(0, 0, 10, .5),
+                      -298px 10px 0px 56px rgba(0, 0, 10, .5),
+                      -540px -40px 0px 50px rgba(0, 0, 10, .5),
+                      -740px -30px 0px 30px rgba(0, 0, 10, .5),
+                      -780px -70px 0px 80px rgba(0, 0, 10, .5),
+                      -1200px 0px 0px 80px rgba(0, 0, 10, .5);
+          /* 多重陰影 */
+      }
+      .sec::before{
+          content: '';
+          width: 100%;
+          height: 200px;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner"></div>
+    <section class="sec">
+      <div class="container">
+        <div class="item">
+          <h2>border</h2>
+          <p>border: 線條尺寸 線條樣式 線條色彩;</br>
+            主要用途是設定物件的邊框線</br>
+            有「占據空間」的特性</br>
+            可以做圓角</p>
+        </div>
+        <div class="item">
+          <h2>outline</h2>
+          <p>outline:  線條尺寸 線條樣式 線條色彩;</br>
+            主要用途是設定物件的外框線</br>
+            沒有佔據空間的特性</br>
+            永遠為矩形(物件的矩形空間)沒辦法做圓角</br>
+            outline 一般是在表單輸入框被 focus 時，在外面那一圈變色的框線</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
