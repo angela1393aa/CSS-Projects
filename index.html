@@ -25,7 +25,9 @@
       }
       .wrap {
         display: flex;
-        width: 1200px;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
         margin: auto;
       }
       .item {
@@ -49,10 +51,27 @@
         color: #aaa;
         text-decoration: none;
       }
+      @media screen and (max-width: 768px) {
+        .wrap {
+          flex-wrap: wrap;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>金魚都能懂的網頁切版</h1>
+    <div class="wrap">
+      <div class="item">
+        <a href="./ISport.html">
+          <div class="pic">
+            <img src="./images/ISport.jpg" alt="ISport" />
+          </div>
+          <div class="txt">
+            <p>ISport!</p>
+          </div>
+        </a>
+      </div>
+    </div>
     <div class="wrap">
       <div class="item">
         <a href="./p03.html">
@@ -209,18 +228,6 @@
           </div>
           <div class="txt">
             <p>不規則邊緣</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="item">
-        <a href="./ISport.html">
-          <div class="pic">
-            <img src="./images/ISport.jpg" alt="ISport" />
-          </div>
-          <div class="txt">
-            <p>ISport!</p>
           </div>
         </a>
       </div>
