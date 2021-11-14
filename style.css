@@ -296,74 +296,6 @@ header {
     transform: rotate(10deg);
   }
 }
-/* ---超通用橫式版面--- */
-.wrap-msg {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    -30deg,
-    rgb(66, 226, 183),
-    rgb(57, 226, 221),
-    rgb(35, 132, 216)
-  );
-}
-
-.wrap-msg .item {
-  width: 348px;
-  margin: 15px;
-  display: flex;
-  background-color: #fff;
-  border: 1px solid #888;
-  /*陰影: x y 模糊程度 色彩 */
-}
-.wrap-msg .pic {
-  width: 50%;
-}
-.wrap-msg .pic img {
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  /* 圖片在垂直對齊時下面會出現一個空間 */
-  object-fit: cover;
-  /* 決定圖片填滿方式:cover讓背景圖盡可能覆蓋整個區域，也會裁切掉部分圖片 */
-}
-.wrap-msg .txt {
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  /* 變直排 */
-  /* justify-content: center; */
-  /* 垂直置中 */
-}
-.wrap-msg .txt h2 {
-  margin-bottom: 0.4em;
-  font-size: 1.4em;
-}
-.wrap-msg .txt p {
-  font-weight: 100;
-}
-.wrap-msg .txt .btn {
-  line-height: 1.5em;
-  border: 1px solid #fe8556;
-  padding: 0 1em;
-  align-self: flex-end;
-  /* 不要滿板 */
-  text-decoration: none;
-  /* 不要底線 */
-  border-radius: 200px;
-  margin-top: 0.4em;
-  color: #fe8556;
-  transition: 0.7s;
-}
-.wrap-msg .txt .btn:hover {
-  background-color: #fe8556;
-  color: #fff;
-}
 /* ---互動圖文卡片--- */
 .wrap-people {
   width: 100%;
@@ -373,9 +305,10 @@ header {
   flex-wrap: wrap;
   /* rwd超過容器會換行 */
 }
+
 .wrap-people .item {
   width: 358px;
-  margin: 15px;
+  margin: 15px auto;
   text-align: center;
   line-height: 1.5;
   background-color: white;
@@ -451,7 +384,7 @@ header {
     flex-direction: column;
   }
   .wrap-pick .item {
-    margin: 50px 0;
+    margin: 50px auto;
   }
   .menu_btn {
     display: block;
