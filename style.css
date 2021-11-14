@@ -390,6 +390,7 @@ header {
   .wrap-pick {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
   .wrap-pick .item {
     margin: 50px auto;
