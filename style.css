@@ -24,9 +24,37 @@
   /* 垂直置中 */
   padding: 20px 0;
 }
+.section-bg1 {
+  background-color: #3d57a59c;
+}
+.section-bg2 {
+  background-color: #3d57a59c;
+}
+.top a {
+  background-color: #687cb8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fa0;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #fa0;
+  font-weight: 800;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  z-index: 1;
+}
+.top:hover a {
+  transform: scale(1.5);
+}
 /* 導覽列 */
 .main-header {
   background: #3f5494;
+  position: relative;
 }
 
 .main-header i {
@@ -113,7 +141,8 @@ header {
 /* 滿板圖文區塊 */
 .banner {
   width: 100%;
-  height: 500px;
+  height: 100%;
+  max-height: 500px;
   background-color: #ccc;
   background: linear-gradient(
         115deg,
@@ -185,20 +214,21 @@ header {
 .main-title .container .txt::before {
   left: 0;
   top: 0;
-  border-top: 5px solid #aaa;
-  border-left: 5px solid #aaa;
+  border-top: 5px solid #fa0;
+  border-left: 5px solid #fa0;
 }
 .main-title .container .txt::after {
   right: 0;
   bottom: 0;
-  border-right: 5px solid #aaa;
-  border-bottom: 5px solid #aaa;
+  border-right: 5px solid #fa0;
+  border-bottom: 5px solid #fa0;
 }
 /* ---破格式設計--- */
 .wrap-pick {
   display: flex;
   justify-content: center;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: auto;
   padding: 75px 0;
   /* 把高度補回來 */
@@ -336,7 +366,8 @@ header {
 }
 /* ---互動圖文卡片--- */
 .wrap-people {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   margin: auto;
   flex-wrap: wrap;
@@ -409,32 +440,7 @@ header {
   justify-content: center;
   width: 100%;
 }
-.top a {
-  background-color: #687cb8;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px #fa0;
-  line-height: 50px;
-  text-align: center;
-  font-size: 24px;
-  color: #fa0;
-  font-weight: 800;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  text-decoration: none;
-  transition: 0.5s;
-}
-.top:hover a {
-  transform: scale(1.5);
-}
-.section-bg1 {
-  background-color: #3d57a59c;
-}
-.section-bg2 {
-  background-color: #3d57a59c;
-}
+
 @media screen and (max-width: 768px) {
   .wrap-people {
     display: flex;
