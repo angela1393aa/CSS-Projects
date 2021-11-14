@@ -311,17 +311,22 @@ header {
   margin: auto;
   flex-wrap: wrap;
   /* rwd超過容器會換行 */
+  padding-top: 20px;
 }
 
 .wrap-people .item {
   width: 358px;
-  margin: 15px auto;
+  margin: 40px auto;
   text-align: center;
   line-height: 1.5;
   background-color: white;
   border: 2px solid #eee;
   transform: translateY(0px);
   transition: 0.5s;
+}
+.wrap-people .item figure {
+  height: 170px;
+  overflow: hidden;
 }
 .wrap-people .item img {
   width: 100%;
@@ -347,8 +352,8 @@ header {
   left: 0;
   top: 0;
   border-top: 50px solid transparent;
-  border-left: 179px solid white;
-  border-right: 179px solid white;
+  border-left: 178px solid white;
+  border-right: 178px solid white;
   transform: translateY(-100%);
 }
 .wrap-people .item:hover {
@@ -361,8 +366,8 @@ header {
   border-bottom-color: white;
 }
 .wrap-people .item:hover .txt:before {
-  border-left: 184px solid #feb85d;
-  border-right: 174px solid #feb85d;
+  border-left: 178px solid #feb85d;
+  border-right: 178px solid #feb85d;
 }
 /* ---footer--- */
 
