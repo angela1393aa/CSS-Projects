@@ -212,13 +212,13 @@ header {
   height: 20px;
 }
 .main-title .container .txt::before {
-  left: 0;
+  left: 10px;
   top: 0;
   border-top: 5px solid #fa0;
   border-left: 5px solid #fa0;
 }
 .main-title .container .txt::after {
-  right: 0;
+  right: 10px;
   bottom: 0;
   border-right: 5px solid #fa0;
   border-bottom: 5px solid #fa0;
@@ -284,6 +284,13 @@ header {
   transform: rotate(-45deg);
 }
 /* ---animation--- */
+.wrap-pick .item:hover {
+  border: 10px solid #fa0;
+}
+.wrap-pick .item:hover .icon:before {
+  border-top: 10px solid #fa0;
+  border-right: 10px solid #fa0;
+}
 .wrap-pick .item:hover img {
   animation: touch 0.2s linear infinite alternate;
   cursor: pointer;
@@ -372,6 +379,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 768px) {
