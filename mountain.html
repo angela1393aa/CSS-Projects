@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti,
+          sans-serif, serif;
+      }
+      header {
+        background-image: url(./images/mountain-2.jpg);
+        height: 700px;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+      }
+      nav a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+        color: darkblue;
+        font-weight: bolder;
+        position: relative;
+      }
+      nav a:hover:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background-color: darkblue;
+      }
+      .banner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        height: 540px;
+      }
+      .banner h1 {
+        letter-spacing: 1.5em;
+        margin: 20px;
+      }
+      .banner::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 25px;
+        border-top: 50vh solid transparent;
+        border-left: 50vw solid rgba(243, 243, 243, 0.971);
+        border-right: 50vw solid rgba(243, 243, 243, 0.971);
+      }
+      .banner::after {
+        content: "";
+        position: absolute;
+        right: 50%;
+        bottom: -25px;
+        transform: translate(50%, 0);
+        width: 10px;
+        height: 100px;
+        background-color: #000;
+      }
+      section {
+        height: 700px;
+        text-align: center;
+      }
+      section:nth-child(1) {
+        background: linear-gradient(
+          180deg,
+          rgba(243, 243, 243, 0.816),
+          rgb(212, 216, 224, 0.816)
+        );
+        position: relative;
+        z-index: -1;
+      }
+      section:nth-child(1) h2 {
+        padding-top: 90px;
+      }
+      section:nth-child(1) .text {
+        display: flex;
+      }
+      section:nth-child(2) {
+        color: white;
+      }
+      section:nth-child(2) {
+        background-image: url(./images/mountain-1.jpg);
+        opacity: 0.9;
+        background-size: cover;
+        position: relative;
+      }
+      section .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      section:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 90vh solid transparent;
+        border-left: 100vw solid rgba(0, 0, 0, 0.843);
+      }
+      section:nth-child(3) {
+        position: relative;
+      }
+      section:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-bottom: 70vh solid transparent;
+        border-left: 100vw solid rgba(0, 0, 0, 0.843);
+      }
+      .cards {
+        display: flex;
+        padding-top: 30px;
+      }
+      .card:hover {
+        transform: translateY(20px);
+      }
+      .card .pic {
+        max-width: 400px;
+        max-height: 400px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: auto;
+        /* transition: 0.1s; */
+      }
+      /* .card .pic:hover {
+        border-radius: 50%;
+      } */
+      .card .pic img {
+        width: 100%;
+      }
+      .card .txt h3 {
+        margin: 10px;
+      }
+      .card .txt p {
+        margin: 0 50px;
+      }
+      .card .txt button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: 1px solid transparent;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      .card .txt button:hover {
+        background-color: gray;
+      }
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px 0;
+        background-color: rgba(0, 0, 0, 0.843);
+        color: white;
+      }
+      @media screen and (max-width: 768px) {
+        .banner h1 {
+          letter-spacing: 0.5em;
+        }
+        .banner p {
+          color: white;
+          margin-top: 50px;
+        }
+        section:nth-child(1) .text {
+          padding-top: 250px;
+          flex-direction: column;
+        }
+        .cards {
+          display: flex;
+          flex-direction: column;
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">賞日步道</a></li>
+          <li><a href="#">溫泉步道</a></li>
+          <li><a href="#">山海步道</a></li>
+          <li><a href="#">叢林步道</a></li>
+        </ul>
+      </nav>
+      <div class="banner">
+        <h1>挑戰你的高度</h1>
+        <p>
+          有沒有想過，即便還沒有爬過台灣第一座高峰玉山，平常爬山所累積起來的上升高度，也是有站上海拔3952公尺的機會呢？
+        </p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>山離我們很近！</h2>
+        <div class="text">
+          <p>
+            臺北大縱走「山離我們很近」系列活動正式開跑了!!10月起至明(111)年6月，共有7場活動，第1場10月在富陽自然生態公園、第2場11月在七星山，將率先帶領大家體驗近在城市咫尺、輕鬆易達的山林步道。參與臺北大縱走系列活動的民眾還可獲得專屬且實用精美的「登山扣環」，臺北市政府歡迎民眾一同上山，體驗不同高度與角度的臺北市景。
+          </p>
+          <p>
+            有爬過的山友應該都知道它不是個容易親近的小百岳，適合平時有運動的民眾前往喔，若近期不想到人山人海的地方，那小編奉勸你：跳過加里山吧！
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="text">
+          <h2>區域步道旅行</h2>
+          <p>
+            在美麗的寶島上，各地都富有特色，按下地圖上的打卡旗探索全台各地步道遊程，然後，出發吧，最好的地方就在你腳下！
+          </p>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="card">
+          <div class="pic">
+            <img src="./images/mountain-3.jpg" alt="mountain-3" />
+          </div>
+          <div class="txt">
+            <h3>象山親山步道</h3>
+            <p>
+              位於台北市信義區的象山，與附近的虎、豹、獅山並稱四獸山，因為外型似象頭而得此名。山頂雖僅有183公尺，但可清楚俯瞰台北盆地及台北地標101大樓，擁有極佳的視野，是許多攝影愛好者拍攝夜景與跨年煙火的最佳地點。
+              象山與虎山地質相同，主要由砂岩組成，步道中可見黃褐色或赭紅色的岩壁與巨石，十分特殊；除此之外，生態多樣豐富、精采可期，因此為大台北地區享受戶外綠林的好去處。
+            </p>
+            <button>了解更多</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="./images/mountain-4.jpg" alt="mountain-4" />
+          </div>
+          <div class="txt">
+            <h3>擎天崗環形步道</h3>
+            <p>
+              擎天崗草原位於魚路古道最高點，故有嶺頭之稱，左可俯視金山平原，右可遠眺下望草崗及大台北盆地，自古即為軍事重地，步道沿線可看到碉堡等遺跡。
+              步道以大草原景觀為主，平緩、走起來舒服又閒適，非常適合闔家同樂如放風箏、野餐、漫步踏青，即使只是靜靜躺著，也頗愜意。步道上常常可看到牛群優閒嚼草、散步，為擎天崗帶來許些活潑氣息；天晴時遠近山峰一覽無遺，頗有芳草碧連天之感；雲霧四起時，縹緲動人如同在夢境，使人感到格外心曠神怡。
+            </p>
+            <button>了解更多</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="./images/mountain-5.jpg" alt="mountain-5" />
+          </div>
+          <div class="txt">
+            <h3>忘憂谷步道</h3>
+            <p>
+              看山好，還是看海好？不用猶豫了，八斗子忘憂(望幽)谷步道給你兩全其美的享受！
+              沿著步道走來，可以看到綠草如茵的忘憂谷、波濤洶湧的基隆嶼還有層層疊疊的山脈，當然，也可以下到潮間帶欣賞古老的化石、可愛的蝦兵蟹將，也能觀察特殊的海蝕地形。不僅如此，身邊隨時有各種色彩繽紛的蝴蝶翩然飛舞，抬頭一望，也能看到氣宇軒昂的大冠鷲或黑鳶，簡直是海陸空超值套餐之旅。
+              除了看山看海，忘憂谷步道的稜頂涼亭及101高地也是看日出、夕陽與夜景的超棒地點，「忘憂」之名果然名符其實！
+            </p>
+            <button>了解更多</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h3>Copyright © 2022 Angela 練習切版用</h3>
+    </footer>
+  </body>
+</html>
