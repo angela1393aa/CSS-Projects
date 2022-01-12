@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background: linear-gradient(
+              90deg,
+              rgba(0, 0, 0, 0.373) 50.5%,
+              transparent 49.5%
+            )
+            center center / 100% 100%,
+          url("./images/mountain-6.jpg") center center / 100%;
+
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+      }
+      nav {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul {
+        display: flex;
+
+        list-style: none;
+      }
+      nav a {
+        display: inline-block;
+        padding: 0px 20px;
+        line-height: 48px;
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(10, 128, 34);
+      }
+      i {
+        vertical-align: middle;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+      }
+      .bannerTet-1 {
+        position: absolute;
+        bottom: 50%;
+        right: 50%;
+        font-size: 1.6cm;
+        color: white;
+      }
+      .bannerTet-2 {
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        font-size: 1.2cm;
+        color: rgba(0, 0, 0, 0.573);
+      }
+      .banner p {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img class="logo" src="./images/logo.png" alt="logo.png" />
+          <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href=""><i class="fab fa-line fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">賞日步道</a></li>
+            <li><a href="#">溫泉步道</a></li>
+            <li><a href="#">山海步道</a></li>
+            <li><a href="#">叢林步道</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="banner">
+        <h1 class="bannerTet-1">Hello!!</h1>
+        <h1 class="bannerTet-2">您好嗎?</h1>
+        <p>遠方的你，現在過的好嗎?</p>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

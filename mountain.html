@@ -30,7 +30,6 @@
         text-decoration: none;
         display: inline-block;
         padding: 20px;
-        margin-top: 20px;
         font-size: 20px;
         color: darkblue;
         font-weight: bolder;
@@ -55,16 +54,19 @@
       .banner h1 {
         letter-spacing: 1.5em;
         margin: 20px;
+        text-shadow: 0 0 5px rgb(110, 132, 156), 0 0 8px rgb(110, 132, 156, 0.5);
+        color: white;
       }
       .banner::before {
         content: "";
         position: absolute;
         left: 0;
-        bottom: 25px;
+        bottom: 0px;
         border-top: 50vh solid transparent;
         border-left: 50vw solid rgba(243, 243, 243, 0.971);
         border-right: 50vw solid rgba(243, 243, 243, 0.971);
       }
+
       .banner::after {
         content: "";
         position: absolute;
@@ -175,12 +177,25 @@
         color: white;
       }
       @media screen and (max-width: 768px) {
+        nav {
+          position: fixed;
+          top: 0px;
+          z-index: 2;
+          background-color: rgba(191, 216, 243, 0.971);
+        }
         .banner h1 {
           letter-spacing: 0.5em;
         }
         .banner p {
           color: white;
           margin-top: 50px;
+        }
+        .banner::before {
+          bottom: -90px;
+          border-top: 25vh solid transparent;
+        }
+        .banner::after {
+          bottom: -90px;
         }
         section:nth-child(1) .text {
           padding-top: 250px;
@@ -265,8 +280,8 @@
           <div class="txt">
             <h3>忘憂谷步道</h3>
             <p>
-              看山好，還是看海好？不用猶豫了，八斗子忘憂(望幽)谷步道給你兩全其美的享受！
-              沿著步道走來，可以看到綠草如茵的忘憂谷、波濤洶湧的基隆嶼還有層層疊疊的山脈，當然，也可以下到潮間帶欣賞古老的化石、可愛的蝦兵蟹將，也能觀察特殊的海蝕地形。不僅如此，身邊隨時有各種色彩繽紛的蝴蝶翩然飛舞，抬頭一望，也能看到氣宇軒昂的大冠鷲或黑鳶，簡直是海陸空超值套餐之旅。
+              看山好，還是看海好不用猶豫了，八斗子忘憂(望幽)谷步道給你兩全其美的享受！
+              沿著步道走來，可以看到綠草如茵的忘憂谷、波濤洶湧的基隆嶼還有層層疊疊的山脈，當然，也可以下到潮間帶欣賞古老的化石、可愛的蝦兵蟹將，也能觀察特殊的地形。不僅如此，身邊隨時有各種色彩繽紛的蝴蝶翩然飛舞，抬頭一望，也能看到氣宇軒昂的大冠鷲或黑鳶，簡直是海陸空超值套餐之旅。
               除了看山看海，忘憂谷步道的稜頂涼亭及101高地也是看日出、夕陽與夜景的超棒地點，「忘憂」之名果然名符其實！
             </p>
             <button>了解更多</button>
