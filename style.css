@@ -24,6 +24,10 @@
   /* 垂直置中 */
   padding: 20px 0;
 }
+.logo {
+  width: 48px;
+  height: 48px;
+}
 .section-bg1 {
   background-color: #3d57a59c;
 }
